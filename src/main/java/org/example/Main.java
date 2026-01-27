@@ -22,6 +22,8 @@ public class Main {
         System.out.println("So nho nhat la: " + soNhoHon);
         System.out.println("Gia tri cua check la: " + check);
 
+        System.out.println("Hello thu 3 ");
+
 
 
 
