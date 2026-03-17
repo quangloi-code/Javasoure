@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.encapsulation.Employee;
 import org.example.javaoop.Order;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -55,18 +56,27 @@ public class Main {
         * Viet method hien thì thong tin của don hang
         * Viet method cap nhap so luong don hang
 */
-        Order order = new Order("Order001", "Don hang 1", 20000, 2);
+//        Order order = new Order("Order001", "Don hang 1", 20000, 2);
+//
+//        System.out.println("Truoc khi update Quanity. ");
+//        order.display();
+//
+//        System.out.println("Saau khi update Quanity. ");
+//        order.update(10);
+//        order.display();
 
-        System.out.println("Truoc khi update Quanity. ");
-        order.display();
+        Employee emp1 = new Employee("Lợi", 20,"SV",20000);
+        Employee emp2 = new Employee("Bo", 18,"GV",12000000);
+        emp1.showInfo();
+        emp2.showInfo();
 
-        System.out.println("Saau khi update Quanity. ");
-        order.update(10);
-        order.display();
+        //Tăng lương.
+        emp1.raiseSalary(0.15);
+        emp2.raiseSalary(0.15);
 
 
 
 
     }
-    }
+}
 
