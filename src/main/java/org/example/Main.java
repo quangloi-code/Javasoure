@@ -1,28 +1,68 @@
 package org.example;
 
-import java.sql.SQLOutput;
-import java.util.Scanner;
+import org.example.javaoop.Order;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static void main() {
-        //Bài 8: Viết chương trình Java nhập vào hai số thực a và b. So sánh hai số: số lớn hơn, số nhỏ hơn, kiểm tra hai số có bằng nhau hay không?
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap gia tri a: ");
-        double a = sc.nextDouble();
-        System.out.println("Nhap gia tri b: ");
-        double b = sc.nextDouble();
-        //Cong thuc
-        double soLonHon = Math.max(a,b);
-        double soNhoHon = Math.min(a,b);
-        boolean check = (a==b);
-        // In ra ket qua
-        System.out.println("So lon nhat la: " + soLonHon);
-        System.out.println("So nho nhat la: " + soNhoHon);
-        System.out.println("Gia tri cua check la: " + check);
+    public static void main(String[] args) {
+        //Tao sinh vien Kien
+        /*buoi1
+        System.out.println("Tao sinh vien Loi");
+        Student svLoi = new Student();
 
-        System.out.println("Hello thu 3 ");
+        svLoi.name = "Quang Loi";
+        svLoi.age = 20;
+        svLoi.gpa = 9.0;
+
+        System.out.println("Ten: " +svLoi.name);
+        System.out.println("Tuoi: " + svLoi.age);
+        System.out.println("Diem GPA: " + svLoi.gpa);
+
+        //In ra hanh vi dang học bai cua sinh vien Kien
+        svLoi.study();
+        svLoi.playSoccer(svLoi.name);
+*/
+        /*buổi 2
+        Student svLoi = new Student("Loi",20,9.0);
+        svLoi.display();
+
+        Student svKien = new Student("Kien",17,9.0);
+        svKien.display();*/
+        /*Account acct = new Account("AccountKien", 10000);
+        acct.display();
+
+        acct.napTien(20000);*/
+/*
+        HinhChuNhat hcn = new HinhChuNhat(2.4,3.6);
+        hcn.display();
+
+        hcn.dienTich();*/
+
+//        AccountEncapsulation acct = new AccountEncapsulation();
+//        acct.setAccountName("So dep account Kien. ");
+//        acct.setBalance(20000);
+//
+//        acct.getBalance();
+//
+//        acct.getAccountName();
+
+/*
+        Tao 1 class Order dung de luu thong tin cua 1 don hang
+        * co các thuộc tỉnh: id, name, price, quantity (so luong)
+        * Viet cac method getter / setter cho các thuộc tỉnh tren
+        * Viet ham tao
+        * Viet method hien thì thong tin của don hang
+        * Viet method cap nhap so luong don hang
+*/
+        Order order = new Order("Order001", "Don hang 1", 20000, 2);
+
+        System.out.println("Truoc khi update Quanity. ");
+        order.display();
+
+        System.out.println("Saau khi update Quanity. ");
+        order.update(10);
+        order.display();
 
 
 
