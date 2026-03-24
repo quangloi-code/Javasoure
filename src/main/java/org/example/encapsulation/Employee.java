@@ -15,6 +15,12 @@ public class Employee {
         this.company = null;
     }
 
+    public Employee(String kiên, int age) {
+    }
+
+    public Employee(String kiên, int i, int i1) {
+    }
+
     public String getName() {
         return name;
     }
@@ -68,6 +74,13 @@ public class Employee {
         } else {
             System.out.println("Không hợp lệ để tăng.");
         }
+    }
+
+    public void display() {
+
+    }
+
+    public void displayInfor() {
     }
 }
 

@@ -1,7 +1,14 @@
 package org.example;
 
+import org.example.baitap.Bus;
+import org.example.baitap.Car;
+import org.example.baitap.Motorbike;
+import org.example.baitap.Vehicle;
 import org.example.encapsulation.Employee;
+import org.example.inheritance.Employee1;
 import org.example.javaoop.Order;
+import org.example.overloading.SumCalculator;
+import org.example.overriding.Child;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -48,7 +55,7 @@ public class Main {
 //
 //        acct.getAccountName();
 
-/*
+/*Bài tập
         Tao 1 class Order dung de luu thong tin cua 1 don hang
         * co các thuộc tỉnh: id, name, price, quantity (so luong)
         * Viet cac method getter / setter cho các thuộc tỉnh tren
@@ -64,18 +71,41 @@ public class Main {
 //        System.out.println("Saau khi update Quanity. ");
 //        order.update(10);
 //        order.display();
+//Bài tập ngày 17/3/2026
+//        Employee emp1 = new Employee("Lợi", 20,"SV",20000);
+//        Employee emp2 = new Employee("Bo", 18,"GV",12000000);
+//        emp1.showInfo();
+//        emp2.showInfo();
+//
+//        //Tăng lương.
+//        emp1.raiseSalary(0.15);
+//        emp2.raiseSalary(0.15);
 
-        Employee emp1 = new Employee("Lợi", 20,"SV",20000);
-        Employee emp2 = new Employee("Bo", 18,"GV",12000000);
-        emp1.showInfo();
-        emp2.showInfo();
+//        Employee1 emp = new Employee1("Kiên", 20);
+//        Employee1 emp1 = new Employee1("Kiên", 20, 10000);
+//
+//        emp.display();
+//        emp1.displayInfor();
 
-        //Tăng lương.
-        emp1.raiseSalary(0.15);
-        emp2.raiseSalary(0.15);
+//22/3
+//        Child child = new Child("Kien",18);
+//        child.work();
+//        SumCalculator sumca = new SumCalculator();
+//
+//        System.out.println("Tong hai so nguyên.");
+//        sumca.display(4,5);
+//
+//        System.out.println("Tong ba so nguyên.");
+//        sumca.display(10,11,13);
+        Vehicle[] vehicles = new Vehicle[3];
 
+        vehicles[0] = new Car("VinFast");
+        vehicles[1] = new Motorbike("Vision");
+        vehicles[2] = new Bus("Xe buyt 81");
 
-
+        for(Vehicle i : vehicles) {
+            i.start();
+        }
 
     }
 }
