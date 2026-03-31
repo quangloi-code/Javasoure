@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.astraction.Bird;
+import org.example.astraction.Dog;
 import org.example.baitap.Bus;
 import org.example.baitap.Car;
 import org.example.baitap.Motorbike;
@@ -97,15 +99,23 @@ public class Main {
 //
 //        System.out.println("Tong ba so nguyên.");
 //        sumca.display(10,11,13);
-        Vehicle[] vehicles = new Vehicle[3];
+//        Vehicle[] vehicles = new Vehicle[3];
+//
+//        vehicles[0] = new Car("VinFast");
+//        vehicles[1] = new Motorbike("Vision");
+//        vehicles[2] = new Bus("Xe buyt 81");
+//
+//        for(Vehicle i : vehicles) {
+//            i.start();
+//        }
 
-        vehicles[0] = new Car("VinFast");
-        vehicles[1] = new Motorbike("Vision");
-        vehicles[2] = new Bus("Xe buyt 81");
-
-        for(Vehicle i : vehicles) {
-            i.start();
-        }
+        Dog dog = new Dog();
+        dog.setName("Husky");
+        dog.makeSound();
+        System.out.println("---------------");
+        Bird bird = new Bird();
+        bird.setName("Bo cau trang");
+        bird.fly();
 
     }
 }
