@@ -7,15 +7,20 @@ import org.example.baitap.Car;
 import org.example.baitap.Motorbike;
 import org.example.baitap.Vehicle;
 import org.example.encapsulation.Employee;
+import org.example.exception.CustemException;
+import org.example.handleeception.Mathematic;
 import org.example.inheritance.Employee1;
 import org.example.javaoop.Order;
 import org.example.overloading.SumCalculator;
 import org.example.overriding.Child;
 
+import javax.net.ssl.SSLException;
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception, SSLException {
         //Tao sinh vien Kien
         /*buoi1
         System.out.println("Tao sinh vien Loi");
@@ -109,13 +114,42 @@ public class Main {
 //            i.start();
 //        }
 
-        Dog dog = new Dog();
-        dog.setName("Husky");
-        dog.makeSound();
-        System.out.println("---------------");
-        Bird bird = new Bird();
-        bird.setName("Bo cau trang");
-        bird.fly();
+//        Dog dog = new Dog();
+//        dog.setName("Husky");
+//        dog.makeSound();
+//        System.out.println("---------------");
+//        Bird bird = new Bird();
+//        bird.setName("Bo cau trang");
+//        bird.fly();
+        //5/4/2026
+//        int a = 4;
+//        int b = 0;
+//
+//        try {
+//            int result = a / b;
+//            System.out.println("Result: " + result);
+//        } catch (ArithmeticException e) {
+//            System.out.println("Không thể chia một số cho 0");
+//        } finally {
+//            System.out.println("Kết thúc chương trình");
+//        }
+//        try {
+//            Mathematic.calculateDivide(4, 0);
+//        } catch (ArithmeticException e) {
+//            System.out.println("Loi: " + e.getMessage());
+//        }
+//        }
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Nhap diem cua ban: ");
+            int score = sc.nextInt();
+            Mathematic.checkScore(score);
+        } catch (CustemException e) {
+            System.out.println("loi: " + e.getMessage());
+        } finally {
+            System.out.println("Ket thuc truong trinh.");
+
+        }
 
     }
 }
